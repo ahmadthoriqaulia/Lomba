@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #navbar {
+        overflow: hidden;
+        background-color: white;
+        width: 965px;
+        height: 125px;
+        border-radius: 5vh;
+      }
+
+      body {
+        background-color: black;
+        height: 1000px;
+        margin: 0px auto;
+      }
+
+      p {
+        margin-top: 200px;
+      }
+
+      #navbar a {
+        float: left;
+        display: block;
+        color: black
+        text-align: center;
+        padding: 14px;
+        text-decoration: none;
+      }
+
+      .content {
+        padding: 16px;
+      }
+
+      .sticky {
+        position: fixed;
+        top: 0;
+        width: 100%;
+      }
+
+      .sticky .content {
+        padding-top: 60px;
+      }
+
+      h1 {
+        font-size: 35px;
+        color: red;
+        padding-left: 40px;
+        margin-top: 160px;
+      }
+
+      .main {
+        height: auto;
+        width: 130vh;
+        background-color: rgb(41, 19, 41);
+        margin: 0px auto;
+        height: 800px;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="main">
+      <div id="navbar">
+        <a href="#home" style="color: black;">Home</a>
+        <a href="#news" style="color: black;">About</a>
+        <a href="#contact" style="color: black;">Contact</a>
+
+      </div>
+      <section class="page">
+      <div class="blank"></div>
+      <h1>Bulan Bahasa di</h1>
+      <h2 style="color: red; font-size: 35px; padding-left: 40px;">Ignatius Global School</h2>
+    </section>
+      
+      <script>
+        window.onscroll = function () {
+          myFunction();
+        };
+
+        var navbar = document.getElementById("navbar");
+
+        var sticky = navbar.offsetTop;
+
+        function myFunction() {
+          if (window.pageYOffset >= sticky) {
+            navbar.classList.add("sticky");
+          } else {
+            navbar.classList.remove("sticky");
+          }
+        }
+      </script>
+    </section>
+  </body>
+</html>
